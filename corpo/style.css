@@ -104,10 +104,13 @@
 
     /*	Blockquotes  */
 	blockquote, blockquote p { font-size: 16px; line-height: 24px; color: #777; font-style: italic; }
-	blockquote { margin: 0 0 20px; padding: 12px 18px; border-left: 3px solid #ddd; }
-	blockquote cite { display: block; font-size: 12px; color: #555; }
+    blockquote p:first-child:first-letter { font-size: 200%; }
+	blockquote { margin: 0 0 20px; padding: 12px 45px; border-left: 4px solid #ed422c; }
+	blockquote cite { display: block; font-size: 12px; color: #555; padding: 10px 0 0 20px; }
 	blockquote cite:before { content: "\2014 \0020"; }
-	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+	blockquote cite a { font-weight: bold; }
+    blockquote cite a:visited, blockquote cite a:visited { color: #000; }
+    blockquote cite a:hover, blockquote cite a:focus { color: #ed422c; }
 
 	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
 
@@ -440,7 +443,8 @@
         color: #d1d9dc; 
         background-color: rgb(59, 59, 59); 
         background-color: rgba(59, 59, 59, 0.8); 
-        max-width: 640px; 
+        /*max-width: 640px;*/
+        max-width: 300px;
         padding: 12px 20px; 
     }
     .slides > li .excerpt :last-child { margin-bottom: 0; }
@@ -449,7 +453,8 @@
         margin:0 auto; 
         position:absolute; 
         padding-left: 46px; 
-        top: 49%;
+        /*top: 49%;*/
+        top: 9%;
     }
     .flex-pauseplay span {text-transform: capitalize;}
 
@@ -1551,7 +1556,7 @@
         .flexslider .flex-direction-nav {width:100%;}
         .slides > li h3 {font-size: 18px; padding: 6px 12px;}
         .slides > li .excerpt { font-size: 13px; padding: 6px 12px;}
-        .slides > li .excerpt { max-width: 440px; }
+        .slides > li .excerpt { /*max-width: 440px;*/ max-width: 280px; }
         #content-wrapper { width: 680px; margin: 0 auto; }
         .entry-content .project-media { width: 100%; }
         .entry-content .project-info { overflow: visible; }
@@ -1584,10 +1589,10 @@
         .flexslider .flex-direction-nav {width:100%;} 
         .flexslider.portfolio-gallery .flex-direction-nav {width:100%;}
         .flexslider .flex-control-nav { display: none;}
-        .slides > li .caption-wrap { width: 70%; top: 45%; }
+        .slides > li .caption-wrap { width: 70%; /*top: 45%;*/ top: 7%; }
         .slides > li h3 {font-size: 16px; padding: 6px 12px;}
         .slides > li .excerpt { font-size: 13px; padding: 6px 12px;}
-        .slides > li .excerpt { max-width: 440px; }
+        .slides > li .excerpt { /*max-width: 440px;*/ max-width: 240px; }
         .row .col {
             float: none;
             width: 100%;
