@@ -30,14 +30,16 @@ class corpo_contact_widget extends WP_Widget {
 		$address = $instance['address'];
 		$phone = $instance['phone'];
 		$email = $instance['email'];
-
+		$linkedinurl = $instance['linkedinurl'];
+		$linkedintext = $instance['linkedintext'];
 
 		?>
 
         <div class="widget contact">
             <h4 class="widget-title"><?php echo $title; ?></h4>
             <ul>
-                <li>
+<?php/*
+				<li>
                     <i class="icon-home"></i>
                     <b><?php _e('Address','corpo'); ?>:</b> <?php echo $address; ?>
                 </li>
@@ -45,9 +47,14 @@ class corpo_contact_widget extends WP_Widget {
                     <i class="icon-phone"></i>
                     <b><?php _e('Phone','corpo'); ?>:</b> <?php echo $phone; ?>
                 </li>
+*/?>
                 <li>
                     <i class="icon-envelope-alt"></i>
                     <b><?php _e('Email','corpo'); ?>:</b> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+                </li>
+                <li>
+                	<i class="icon-linkedin-sign"></i>
+                	<b><?php _e('LinkedIn','corpo'); ?>:</b> <a href="<?php echo $linkedinurl; ?>"><?php echo $linkedintext; ?></a>
                 </li>
             </ul>
         </div>
@@ -66,6 +73,8 @@ class corpo_contact_widget extends WP_Widget {
 		$instance['address'] = strip_tags( $new_instance['address'] );
 		$instance['phone'] = strip_tags( $new_instance['phone'] );
 		$instance['email'] = strip_tags( $new_instance['email'] );
+		$instance['linkedinurl'] = strip_tags( $new_instance['linkedinurl'] );
+		$instance['linkedintext'] = strip_tags( $new_instance['linkedintext'] );
 		return $instance;
 	}
 
@@ -95,7 +104,16 @@ class corpo_contact_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e('Email','corpo') ?>:</label>
 			<input id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" value="<?php echo $instance['email']; ?>" style="width:90%;" />
-		</p>        
+		</p>
+		<!-- LinkedIn -->
+		<p>
+			<label for="<?php echo $this->get_field_id( 'linkedinurl' ); ?>"><?php _e('LinkedIn URL','corpo') ?>:</label>
+			<input id="<?php echo $this->get_field_id( 'linkedinurl' ); ?>" name="<?php echo $this->get_field_name( 'linkedinurl' ); ?>" value="<?php echo $instance['linkedinurl']; ?>" style="width:90%;" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'linkedintext' ); ?>"><?php _e('LinkedIn Link Text','corpo') ?>:</label>
+			<input id="<?php echo $this->get_field_id( 'linkedintext' ); ?>" name="<?php echo $this->get_field_name( 'linkedintext' ); ?>" value="<?php echo $instance['linkedintext']; ?>" style="width:90%;" />
+		</p>  
 	<?php
 	}
 }

@@ -247,6 +247,8 @@
         text-transform:uppercase; 
         text-align:center; 
         text-decoration:none;
+	position: relative;
+	z-index: 11;
     }
     nav#main-nav > ul > li > a:hover {text-decoration:none;}
 
