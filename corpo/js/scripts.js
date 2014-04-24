@@ -43,5 +43,9 @@ jQuery(function($){
         };
     
     });
-        
+
+    // disable lightbox on mobile
+    if (window.matchMedia("(max-width: 400px)").matches) {
+        $('a.cboxElement').removeClass('cboxElement').removeAttr('data-lightboxplus');
+    }
 });
